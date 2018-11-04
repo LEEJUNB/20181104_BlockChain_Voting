@@ -1,4 +1,3 @@
-// Import the page's CSS. Webpack will know what to do with it.
 import '../styles/app.css'
 
 // Import libraries we need.
@@ -40,7 +39,7 @@ const App = {
 
       accounts = accs
       account = accounts[0]
-	
+
 
     })
       //load all candidates and their votes
@@ -48,7 +47,7 @@ const App = {
       self.loadCandidatesAndVotes();
   },
   loadCandidatesAndVotes : function(){
-      var candidateNames = Object.keys(candidates);
+      var candidateNames = Object.keys(candidates); 
       for(var i = 0; i < candidateNames.length; i++) {
          let name = candidateNames[i]
          Voting.deployed().then(function(f) {
@@ -88,3 +87,4 @@ window.addEventListener('load', function () {
 
   App.start()
 })
+
